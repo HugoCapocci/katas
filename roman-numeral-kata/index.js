@@ -1,4 +1,8 @@
 const refs = [
+  { num: 1000, roman: 'M'},
+  { num: 900, roman: 'CM'},
+  { num: 500, roman: 'D'},
+  { num: 400, roman: 'CD'},
   { num: 100, roman: 'C'},
   { num: 90, roman: 'XC'},
   { num: 50, roman: 'L'},

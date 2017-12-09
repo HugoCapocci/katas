@@ -28,4 +28,8 @@ describe('numberToRomanNumeral', () => {
   it('should convert 369 to CCCLXIX', () => {
     expect(toRomanNumber(369)).toEqual('CCCLXIX');
   });
+
+  it('should convert 2999 to MMCMXCIX', () => {
+    expect(toRomanNumber(2999)).toEqual('MMCMXCIX');
+  });
 });
