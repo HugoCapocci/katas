@@ -37,7 +37,7 @@ describe('numberToRomanNumeral', () => {
 
   describe('toDigitNumber', () => {
     it('should convert I to 1', () => {
-      expect(toDigitNumber('I')).toEqual('1');
+      expect(toDigitNumber('I')).toEqual(1);
     });
   })
 });

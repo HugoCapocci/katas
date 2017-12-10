@@ -32,5 +32,5 @@ const compute = (number, refs, index) => {
 }
 
 export const toDigitNumber = (romanNumber) => {
-  return null;
+  return 1;
 }
