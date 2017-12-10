@@ -15,19 +15,19 @@ const refs = [
 ]
 
 export const toRomanNumber = (number) => {
-  return computeRoman(number, refs, 0);
+  const initialAccumulator = { roman: '', number };
+  return refs.reduce((accumulator, { num, roman }) => {
+    if (accumulator.number === num) return { number: 0, roman: accumulator.roman + roman };
+    if (accumulator.number > num) {
+      const occurences = parseInt(accumulator.number / num);
+      return {
+        roman: accumulator.roman + roman.repeat(occurences),
+        number: accumulator.number - (num * occurences),
+      }
+    }
+    return accumulator;
+  }, initialAccumulator).roman;
 };
-
-const computeRoman = (number, refs, index) => {
-  const { num, roman } = refs[index];
-  if (number === num) return roman;
-  if (number > num) {
-    const occurences = parseInt(number / num);
-    const nextNumber = number - (num * occurences);
-    return roman.repeat(occurences) + (num > 1 ? computeRoman(nextNumber, refs, index + 1) : '');
-  }
-  return computeRoman(number, refs, index + 1);
-}
 
 export const toDigitNumber = (romanNumber) => {
   let digit = 0;
