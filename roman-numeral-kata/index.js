@@ -14,7 +14,7 @@ const refs = [
   { num: 1, roman: 'I'},
 ]
 
-const toRomanNumber = (number) => {
+export const toRomanNumber = (number) => {
   return compute(number, refs, 0);
 };
 
@@ -31,4 +31,6 @@ const compute = (number, refs, index) => {
   return compute(number, refs, index + 1);
 }
 
-export default toRomanNumber;
+export const toDigitNumber = (romanNumber) => {
+  return null;
+}
