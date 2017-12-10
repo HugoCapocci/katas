@@ -47,5 +47,29 @@ describe('numberToRomanNumeral', () => {
     it('should convert III to 3', () => {
       expect(toDigitNumber('III')).toEqual(3);
     });
+
+    it('should convert IV to 4', () => {
+      expect(toDigitNumber('IV')).toEqual(4);
+    });
+
+    it('should convert V to 5', () => {
+      expect(toDigitNumber('V')).toEqual(5);
+    });
+
+    it('should convert VII to 7', () => {
+      expect(toDigitNumber('VII')).toEqual(7);
+    });
+
+    it('should convert XLIII to 43', () => {
+      expect(toDigitNumber('XLIII')).toEqual(43);
+    });
+
+    it('should convert CCCLXIX to 369', () => {
+      expect(toDigitNumber('CCCLXIX')).toEqual(369);
+    });
+
+    it('should convert MMCMXCIX to 2999', () => {
+      expect(toDigitNumber('MMCMXCIX')).toEqual(2999);
+    });
   })
 });
