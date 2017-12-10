@@ -32,5 +32,24 @@ const compute = (number, refs, index) => {
 }
 
 export const toDigitNumber = (romanNumber) => {
-  return 1;
+  let digit = 0;
+  while(romanNumber.length > 0) {
+    const { nextRomanNumber, num } = computeDigit(romanNumber);
+    romanNumber = nextRomanNumber;
+    digit += num;
+  }
+  return digit;
+}
+
+const computeDigit = (romanNumber) => {
+  let nextRomanNumber = romanNumber;
+  for ({ num, roman } of refs) {
+    if (nextRomanNumber.startsWith(roman)) {
+      return {
+        nextRomanNumber: nextRomanNumber.substring(roman.length),
+        num,
+      }
+    }
+  }
+
 }

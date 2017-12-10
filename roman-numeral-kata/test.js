@@ -39,5 +39,13 @@ describe('numberToRomanNumeral', () => {
     it('should convert I to 1', () => {
       expect(toDigitNumber('I')).toEqual(1);
     });
+
+    it('should convert II to 2', () => {
+      expect(toDigitNumber('II')).toEqual(2);
+    });
+
+    it('should convert III to 3', () => {
+      expect(toDigitNumber('III')).toEqual(3);
+    });
   })
 });
