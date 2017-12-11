@@ -12,5 +12,9 @@ const toNumber = (flatNumber) => {
   switch(flatNumber) {
     case '     |  |':
       return '1';
+    case ' _  _||_ ':
+      return '2';
+    default:
+      return '';
   }
 }
