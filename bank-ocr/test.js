@@ -21,4 +21,13 @@ describe.only('bankOcr', () => {
     ];
     expect(bankOcr.parse(two)).toEqual('2');
   });
+
+  it('Should parse characters "onetwo"', () => {
+    const oneTwo = [
+      '    _ ',
+      '  | _|',
+      '  ||_ ',
+    ];
+    expect(bankOcr.parse(oneTwo)).toEqual('12');
+  });
 });

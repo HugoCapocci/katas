@@ -1,11 +1,16 @@
 export const parse = (lines) => {
-  let flatNumber = '';
-  for (let i of [0, 1, 2]) {
-    for (let j of [0, 1, 2]) {
-      flatNumber += lines[i][j];
+  const length = lines[0].length / 3;
+  const flatNumbers = [];
+  let start = 0;
+  while (start < length * 3) {
+    let flatNumber = ''
+    for (let i of [0, 1, 2]) {
+      flatNumber += lines[i].slice(start, start + 3);
     }
+    start += 3;
+    flatNumbers.push(flatNumber);
   }
-  return toNumber(flatNumber);
+  return flatNumbers.map(toNumber).join('');
 }
 
 const toNumber = (flatNumber) => {
