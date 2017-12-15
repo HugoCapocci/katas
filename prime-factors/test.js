@@ -37,4 +37,8 @@ describe.only('prime-factors', () => {
     expect(getPrimeFactors(10)).toEqual([2, 5]);
   });
 
+  it('Should return 4 prime factors for 100', () => {
+    expect(getPrimeFactors(100)).toEqual([2, 2, 5, 5]);
+  });
+
 });
