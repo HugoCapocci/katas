@@ -13,4 +13,8 @@ describe.only('prime-factors', () => {
     expect(getPrimeFactors(3)).toEqual([3]);
   });
 
+  it('Should return two prime factors for 4', () => {
+    expect(getPrimeFactors(4)).toEqual([2, 2]);
+  });
+
 });
