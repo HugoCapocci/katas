@@ -1,16 +1,13 @@
 const getPrimeFactors = (n) => {
   const res = [];
-  if (n > 1) {
-    while (n % 2 === 0) {
-      res.push(2);
-      n /= 2;
+  let factor = 2;
+  while (n > 1) {
+    while (n % factor === 0) {
+      res.push(factor);
+      n /= factor;
     }
-    while (n % 3 === 0) {
-      res.push(3);
-      n /= 3;
-    }
+    factor++;
   }
-  if (n > 1) res.push(n);
   return res;
 }
 
