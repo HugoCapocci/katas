@@ -1,6 +1,7 @@
 const getPrimeFactors = (n) => {
-  if (n === 2) return [2];
-  return [];
+  const res = [];
+  if (n > 1) res.push(n);
+  return res;
 }
 
 
