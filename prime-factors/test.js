@@ -5,4 +5,8 @@ describe.only('prime-factors', () => {
     expect(getPrimeFactors(1)).toEqual([]);
   });
 
+  it('Should return one prime factor for 2', () => {
+    expect(getPrimeFactors(2)).toEqual([2]);
+  });
+
 });

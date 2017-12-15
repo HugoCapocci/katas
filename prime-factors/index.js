@@ -1,4 +1,5 @@
-const getPrimeFactors = (number) => {
+const getPrimeFactors = (n) => {
+  if (n === 2) return [2];
   return [];
 }
 
