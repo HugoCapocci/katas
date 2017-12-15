@@ -17,4 +17,16 @@ describe.only('prime-factors', () => {
     expect(getPrimeFactors(4)).toEqual([2, 2]);
   });
 
+  it('Should return one prime factor for 5', () => {
+    expect(getPrimeFactors(5)).toEqual([5]);
+  });
+
+  it('Should return two prime factors for 6', () => {
+    expect(getPrimeFactors(6)).toEqual([2, 3]);
+  });
+
+  it('Should return 3 prime factors for 8', () => {
+    expect(getPrimeFactors(8)).toEqual([2, 2, 2]);
+  });
+
 });
