@@ -29,4 +29,12 @@ describe.only('prime-factors', () => {
     expect(getPrimeFactors(8)).toEqual([2, 2, 2]);
   });
 
+  it('Should return 2 prime factors for 9', () => {
+    expect(getPrimeFactors(9)).toEqual([3, 3]);
+  });
+
+  it('Should return 2 prime factors for 10', () => {
+    expect(getPrimeFactors(10)).toEqual([2, 5]);
+  });
+
 });
