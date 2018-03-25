@@ -1,10 +1,5 @@
-const isBoardFull = (grid) => {
-  return grid.every((row) => {
-    return row.every((field) => {
-      return field !== '';
-    });
-  })
-}
+const isBoardFull = (grid) =>
+  grid.every((row) => row.every((field) => field !== ''))
 
 export default class TicTacToeGame {
   constructor() {
@@ -29,20 +24,15 @@ export default class TicTacToeGame {
   }
 
   isRowTakenByAPlayer(grid) {
-    for(let i = 0; i < grid.length; i++){
-      const row = grid[i];
-      let isFirstPlayer = row.every((field) => {
-        return field === this.players[0]
-      });
-  
-      let isSecondPlayer = row.every((field) => {
-        return field === this.players[1]
-      });
-  
-      if (isFirstPlayer || isSecondPlayer)
+    for(let row of grid) {
+      if (this.isRowTakenByPlayer(row, 0) || this.isRowTakenByPlayer(row, 1))
         return true;
     }
     return false;
+  }
+
+  isRowTakenByPlayer(row, playerOrder) {
+    return row.every((field) => field === this.players[playerOrder]);
   }
 
 }
