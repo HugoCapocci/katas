@@ -15,8 +15,8 @@ describe.only('ticTacToc', () => {
     const fullGrid = [
       ['b','b','b'],
       ['b','b','b'],
-      ['b','b','b'],
-    ]
+      ['b','b','b']
+    ];
     expect(ticTacToeGame.isFinished(fullGrid)).toEqual(true);
   });
 
@@ -33,7 +33,7 @@ describe.only('ticTacToc', () => {
     const fullGrid = [
       ['X','X','X'],
       ['','',''],
-      ['','',''],
+      ['','','']
     ];
     expect(ticTacToeGame.isFinished(fullGrid)).toEqual(true);
   });
@@ -42,7 +42,7 @@ describe.only('ticTacToc', () => {
     const fullGrid = [
       ['X','O','X'],
       ['','',''],
-      ['','',''],
+      ['','','']
     ];
     expect(ticTacToeGame.isFinished(fullGrid)).toEqual(false);
   });
