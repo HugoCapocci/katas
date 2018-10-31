@@ -1,6 +1,6 @@
 import TicTacToeGame from './index';
 
-describe.only('ticTacToc', () => {
+describe('ticTacToc', () => {
 
   const ticTacToeGame = new TicTacToeGame();
 
